@@ -17,7 +17,7 @@ var INITIAL_OUTPUT_CAP = 10
 var JSON_DATETIME_FIELDS = []string{"datetime", "timestamp", "time", "date"}
 
 // MAX_TIMESTAMP_START_POS determines if a log timestamp signals a new multi-line log.
-var MAX_TIMESTAMP_START_POS = 4
+var MAX_TIMESTAMP_START_POS = 6
 
 // MULTILINE_BUF_CAP is the slice capacity of new buffers to aggregate multi-line logs.
 var MULTILINE_BUF_CAP = 10
