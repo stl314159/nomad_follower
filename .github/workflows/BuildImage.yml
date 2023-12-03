@@ -3,7 +3,7 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "j-aub/medusa-tv-download-dir"
+  ENDPOINT: "j-aub/nomad_follower"
   BRANCH: "master"
 
 jobs:
