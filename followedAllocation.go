@@ -52,6 +52,7 @@ func (f *FollowedAllocation) Start(save *SavedAlloc) {
 						"Allocation: %s ID: %s opt-out",
 						f.Alloc.Name,
 						f.Alloc.ID,
+					)
 				}
 			}
 			if !skip {
