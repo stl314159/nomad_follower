@@ -47,6 +47,11 @@ func (f *FollowedAllocation) Start(save *SavedAlloc) {
 			for _, s := range ft.logTemplate.ServiceTags {
 				if s == f.logTag {
 					skip = true
+					f.log.Debugf(
+						"FollowedAllocation.Start",
+						"Allocation: %s ID: %s opt-out",
+						f.Alloc.Name,
+						f.Alloc.ID,
 				}
 			}
 			if !skip {
