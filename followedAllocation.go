@@ -41,12 +41,14 @@ func (f *FollowedAllocation) Start(save *SavedAlloc) {
 	for _, tg := range f.Alloc.Job.TaskGroups {
 		for _, task := range tg.Tasks {
 			ft := NewFollowedTask(f.Alloc, *tg.Name, task, f.Nomad, f.Quit, f.OutputChan, f.log)
-			skip := true
-			for _, s := range ft.logTemplate.ServiceTags {
-				if s == f.logTag {
-					skip = false
-				}
-			}
+			// Modify to log all allocations regardless of tag
+			skip := false
+			// skip := true
+			// for _, s := range ft.logTemplate.ServiceTags {
+			// 	if s == f.logTag {
+			// 		skip = false
+			// 	}
+			// }
 			if !skip {
 				if save != nil {
 					f.log.Debug("FollowedAllocation.Start", "Restoring saved allocation data")
