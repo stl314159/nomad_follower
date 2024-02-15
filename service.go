@@ -15,7 +15,7 @@ var DEFAULT_CIRCUIT_BREAK = 60 * time.Second
 var DEFAULT_LOG_FILE = "nomad.log"
 var DEFAULT_SAVE_FILE = "nomad-follower.json"
 
-var DEFAULT_LOG_TAG = "nomad_follower"
+var DEFAULT_LOG_TAG = "logging-opt-out"
 
 var MAX_LOG_SIZE = 50
 var MAX_LOG_BACKUPS = 1

@@ -5,7 +5,7 @@ Log forwarder for aggregating allocation logs from nomad worker agents.
 Run the application on each worker in a nomad cluster.
 ```
 docker pull stl314159/nomad_follower:latest
-docker run -v log_folder:/log -e LOG_TAG="logging" "-e LOG_FILE="/log/nomad-forwarder.log" stl314159/nomad_follower:latest
+docker run -v log_folder:/log -e LOG_TAG="logging-opt-out" "-e LOG_FILE="/log/nomad-forwarder.log" stl314159/nomad_follower:latest
 ```
 
 Example Nomad job file available [here](./nomad_follower.nomad), with an example job outputting random logs [here](./example.nomad).
